@@ -1,89 +1,98 @@
-# 🌍 Global Health Indicators EDA (2000–2020)
+# 🌍 Life Expectancy Prediction Using Machine Learning
 
-This project explores global health indicators to uncover patterns and relationships between life expectancy, health spending, immunization, and infant mortality. The goal is to extract meaningful insights from WHO data and showcase data science skills relevant to health and development sectors.
+A data science project by [@dukejnrs](https://github.com/dukejnrs)
 
-## 📌 Project Overview
-
-The project analyzes global health data across multiple countries between 2000 and 2020. The goal is to explore trends in key indicators such as life expectancy, immunization coverage, infant mortality, and health spending — and uncover insights related to global health progress and inequalities.
+This project explores global health data to **predict life expectancy** using various machine learning models. The work includes full data cleaning, exploratory data analysis (EDA), feature engineering, modeling, and interpretation.
 
 ---
 
-## 🎯 Problem Statement
+## 📁 Dataset
+The dataset contains information on:
+- Immunization coverage (Polio, Hepatitis B, Diphtheria)
+- Economic indicators (GDP, income index)
+- Health indicators (BMI, HIV/AIDS, thinness levels)
+- Education (schooling years)
+- Development status (Developed vs Developing countries)
+- And more...
 
-How have key global health indicators evolved across countries and regions between 2000 and 2020, and what patterns or disparities can be observed?
-
----
-
-## Dataset
-- Source: WHO & UN health indicators (via Kaggle)
-- Rows: 2,900+
-- Columns: 22 health and economic indicators
-- Link: https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who
-
----
-
-## Objectives
-- Understand what affects life expectancy globally
-- Compare developed vs. developing countries
-- Examine immunization and health spending impact
-- Identify countries with high or low health outcomes
+Source: WHO + UN Health Statistics  
+(Used via `Life_Expectancy_Data.csv` on [Google Colab](https://colab.research.google.com))
 
 ---
 
-## EDA and Visualization Steps
-
-1. **Data Loading & Cleaning**
-   - Loaded data from GitHub into Colab using pandas
-   - Cleaned column names and dropped missing values for some plots
-
-2. **Life Expectancy by Development Status**
-   - Compared developed and developing countries using boxplots
-
-3. **Immunization vs. Infant Mortality**
-   - Found negative correlation between immunization and infant deaths
-   - Visualized with scatter plots and heatmaps
-
-4. **Health Spending vs. Life Expectancy**
-   - Higher spending tends to increase life expectancy
-   - Some outliers suggest inefficiency or other factors
-
-5. **Trends Over Time**
-   - Tracked life expectancy and infant deaths from 2000 to 2015
-   - Developing countries show steady improvement
-
-6. **Country Rankings**
-   - Top 10 countries by life expectancy
-   - Top 10 countries with highest infant mortality
+## 🎯 Objective
+To build a robust machine learning model that predicts a country's **life expectancy** based on health, economic, and demographic factors. The goal is to gain insights that can inform health policy decisions.
 
 ---
 
-## Key Insights
+## 🔎 Project Steps
 
-- More immunization is linked to lower infant deaths
-- High health spending generally improves life expectancy
-- Developing countries are improving but still lag behind
-- Outliers show that healthcare quality matters, not just funding
+### 1. Data Cleaning & Imputation
+- Identified missing values across key features
+- Imputed:
+  - Numeric columns with **mean**
+  - Categorical/binary columns with **mode/median**
+
+### 2. Exploratory Data Analysis (EDA)
+- Visualized:
+  - Life expectancy by development status
+  - Immunization coverage and its impact
+  - Correlation between variables
+- Detected and discussed outliers
+
+### 3. Feature Engineering & Scaling
+- One-hot encoded categorical columns (e.g., `Status`)
+- Scaled features using `StandardScaler`
+
+### 4. Modeling
+- **Train-test split** (80:20)
+- Evaluated 3 regression models:
+  - **Linear Regression**
+  - **Random Forest Regressor**
+  - **Gradient Boosting Regressor**
+
+#### ✅ Best Model: Tuned Random Forest
+| Metric | Value |
+|--------|--------|
+| MAE (Mean Absolute Error) | **1.07** |
+| RMSE (Root Mean Squared Error) | **1.72** |
+| R² Score | **0.97** |
 
 ---
 
-## Future Improvements
+## 🔍 Feature Importance
 
-- Handle missing data with imputation
-- Train machine learning models to predict life expectancy
-- Build dashboards for country comparisons (Streamlit or Plotly)
-- Add per-country reports and interactive charts
+Top 10 features driving life expectancy:
+1. **Schooling**
+2. **Income Composition of Resources**
+3. **BMI**
+4. **Diphtheria Immunization**
+5. **Polio Immunization**
+6. **Adult Mortality** (negative impact)
+7. **HIV/AIDS Prevalence** (negative impact)
+8. **Thinness (1-19 years)** (negative impact)
+9. **Thinness (5-9 years)** (negative impact)
+10. **Status (Developing)** (negative impact)
 
 ---
 
-## How to Run
-
-1. Open the notebook in Google Colab
-2. All data loads from a GitHub URL — no upload needed
-3. Run cells from top to bottom
+## 🧠 Insights
+- Better education and economic access **strongly improve** life expectancy.
+- High HIV/AIDS prevalence and undernutrition **drastically reduce** life expectancy.
+- Immunization programs correlate positively with longevity.
 
 ---
 
-## Author
+## ✅ Next Steps
+- [ ] Save and deploy the model
+- [ ] Create an interactive dashboard (Streamlit/Gradio)
+- [ ] Try deep learning or time-series approaches
+- [ ] Add more health indicators (if available)
 
-- GitHub: https://github.com/dukejnrs
-- Aspiring Data Scientist | Biostatistics | Computer-Aided Drug Discovery
+---
+
+## 👨‍💻 Author
+**Duke Jnrs**  
+[GitHub Profile »](https://github.com/dukejnrs)
+
+---
