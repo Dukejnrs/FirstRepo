@@ -1,8 +1,10 @@
 # 🌍 Global Health Indicators EDA (2000–2020)
 
+This project explores global health indicators to uncover patterns and relationships between life expectancy, health spending, immunization, and infant mortality. The goal is to extract meaningful insights from WHO data and showcase data science skills relevant to health and development sectors.
+
 ## 📌 Project Overview
 
-This project analyzes global health data across multiple countries between 2000 and 2020. The goal is to explore trends in key indicators such as life expectancy, immunization coverage, infant mortality, and health spending — and uncover insights related to global health progress and inequalities.
+The project analyzes global health data across multiple countries between 2000 and 2020. The goal is to explore trends in key indicators such as life expectancy, immunization coverage, infant mortality, and health spending — and uncover insights related to global health progress and inequalities.
 
 ---
 
@@ -12,64 +14,76 @@ How have key global health indicators evolved across countries and regions betwe
 
 ---
 
-## 📁 Dataset
-
-- **Source:** WHO / World Bank Global Health Data *(from Kaggle)*
-- **Features Include:**
-  - Country, Year, Status (Developed/Developing)
-  - Life expectancy, Adult mortality, Infant deaths
-  - Immunization coverage (Hepatitis B, Polio, etc.)
-  - Health expenditure (% of GDP), GDP, Schooling
-
-## 🧹 Data Cleaning & Preprocessing
-
-- ✅ Uploaded the `health_data.csv` dataset
-- ✅ Cleaned column names: stripped spaces, lowercased, and replaced spaces with underscores
-- ✅ Inspected dataset structure and types using `.info()`
+## Dataset
+- Source: WHO & UN health indicators (via Kaggle)
+- Rows: 2,900+
+- Columns: 22 health and economic indicators
+- Link: https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who
 
 ---
 
-## 📊 Exploratory Analysis & Visualizations
-
-*(To be updated as you build charts)*
-
-### 1. Life Expectancy Over Time
-- 📈 Line chart: Global average trend from 2000–2020
-- 🌍 Country-level comparisons
-
-### 2. Development Status Comparison
-- 📊 Boxplot: Life expectancy by status (Developed vs. Developing)
-
-### 3. Immunization vs. Mortality
-- 🔍 Scatter plots and correlation analysis
-
-### 4. Health Spending vs. Life Expectancy
-- 💰 Analyzing the effect of investment on outcomes
+## Objectives
+- Understand what affects life expectancy globally
+- Compare developed vs. developing countries
+- Examine immunization and health spending impact
+- Identify countries with high or low health outcomes
 
 ---
 
-## 🔑 Key Findings
+## EDA and Visualization Steps
 
-*(Write these as you discover them!)*
+1. **Data Loading & Cleaning**
+   - Loaded data from GitHub into Colab using pandas
+   - Cleaned column names and dropped missing values for some plots
 
-- Life expectancy increased globally from 2000 to 2020
-- Developing countries show faster improvement but lower overall values
-- Immunization rates are strongly negatively correlated with infant mortality
-- Some outliers exist (e.g., countries with high GDP but poor health outcomes)
+2. **Life Expectancy by Development Status**
+   - Compared developed and developing countries using boxplots
+
+3. **Immunization vs. Infant Mortality**
+   - Found negative correlation between immunization and infant deaths
+   - Visualized with scatter plots and heatmaps
+
+4. **Health Spending vs. Life Expectancy**
+   - Higher spending tends to increase life expectancy
+   - Some outliers suggest inefficiency or other factors
+
+5. **Trends Over Time**
+   - Tracked life expectancy and infant deaths from 2000 to 2015
+   - Developing countries show steady improvement
+
+6. **Country Rankings**
+   - Top 10 countries by life expectancy
+   - Top 10 countries with highest infant mortality
 
 ---
 
-## 📦 How to Use This Project
+## Key Insights
 
-1. Clone the repo or open the Colab notebook
-2. Upload the dataset (or load from Kaggle if API is configured)
-3. Run each section step-by-step
-4. Check visualizations in the `figures/` folder
+- More immunization is linked to lower infant deaths
+- High health spending generally improves life expectancy
+- Developing countries are improving but still lag behind
+- Outliers show that healthcare quality matters, not just funding
 
 ---
 
-## 👤 Author
+## Future Improvements
 
-- **Name:** Duke Joshua 
-- **Email/Contact:** dukejoshua043@gmail.com
-- **GitHub:** dukejnrs 
+- Handle missing data with imputation
+- Train machine learning models to predict life expectancy
+- Build dashboards for country comparisons (Streamlit or Plotly)
+- Add per-country reports and interactive charts
+
+---
+
+## How to Run
+
+1. Open the notebook in Google Colab
+2. All data loads from a GitHub URL — no upload needed
+3. Run cells from top to bottom
+
+---
+
+## Author
+
+- GitHub: https://github.com/yourusername
+- Aspiring Data Scientist | Biostatistics | Computer-Aided Drug Discovery
