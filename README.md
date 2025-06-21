@@ -85,5 +85,5 @@ How have key global health indicators evolved across countries and regions betwe
 
 ## Author
 
-- GitHub: https://github.com/yourusername
+- GitHub: https://github.com/dukejnrs
 - Aspiring Data Scientist | Biostatistics | Computer-Aided Drug Discovery
