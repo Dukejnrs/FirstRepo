@@ -5,8 +5,7 @@ import joblib
 
 #Load the trained model
 
-model = joblib.load("models/life_expectancy_rf_model.pkl")
-
+model = joblib.load("life_expectancy_rf_model.pkl")
 #Define the app title
 
 st.title("🌍 Life Expectancy Predictor") 
