@@ -21,16 +21,11 @@ How have key global health indicators evolved across countries and regions betwe
   - Immunization coverage (Hepatitis B, Polio, etc.)
   - Health expenditure (% of GDP), GDP, Schooling
 
----
+## 🧹 Data Cleaning & Preprocessing
 
-## 🧹 Data Cleaning & Preprocess
-
-*(To be updated as you clean the data)*
-
-- ✅ Loaded dataset with `X` rows and `Y` columns
-- ✅ Stripped and standardized column names
-- ✅ Handled missing values (describe your method)
-- ✅ Converted data types where needed
+- ✅ Uploaded the `health_data.csv` dataset
+- ✅ Cleaned column names: stripped spaces, lowercased, and replaced spaces with underscores
+- ✅ Inspected dataset structure and types using `.info()`
 
 ---
 
