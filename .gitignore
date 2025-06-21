@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# Colab temporary files
+*.swp
+*.bak
+
+# Data files (keep raw data out of version control)
+data/*.csv
+data/*.xlsx
+data/*.tsv
+data/*.json
+
+# Model files (optional: unless you want them versioned)
+models/*.pkl
+models/*.joblib
+models/*.h5
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment or dependency files
+*.log
+*.egg-info/
+*.lock
+pip-wheel-metadata/
+
+# VSCode and Jupyter settings (optional)
+.vscode/
+.ipython/
+
+# Personal token or credentials
+*.env
+token.txt
