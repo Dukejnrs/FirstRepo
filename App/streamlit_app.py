@@ -28,12 +28,10 @@ thinness_1_19 = st.sidebar.slider("Thinness (10-19 years)", 0.0, 25.0, 3.0)
 thinness_5_9 = st.sidebar.slider("Thinness (5-9 years)", 0.0, 25.0, 3.0)
 status = st.sidebar.selectbox("Country Status", ["Developed", "Developing"])
 
-# Convert status to encoded form (based on one-hot encoding)
-status_developed = 1 if status == "Developed" else 0
+# Convert status to one-hot encoded form
+status_developing = 1 if status == "Developing" else 0
 
-# Create input data using expected features
-expected_features = model.feature_names_in_
-
+# Manually set feature names to match training
 input_data = pd.DataFrame([[
     schooling,
     income_comp,
@@ -44,8 +42,19 @@ input_data = pd.DataFrame([[
     hiv_aids,
     thinness_1_19,
     thinness_5_9,
-    status_developed
-]], columns=expected_features)
+    status_developing
+]], columns=[
+    "Schooling",
+    "Income composition of resources",
+    "BMI",
+    "Diphtheria",
+    "Polio",
+    "Adult Mortality",
+    "HIV/AIDS",
+    "Thinness 1-19 years",
+    "Thinness 5-9 years",
+    "Status_Developing"
+])
 
 # Predict
 if st.button("Predict Life Expectancy"):
